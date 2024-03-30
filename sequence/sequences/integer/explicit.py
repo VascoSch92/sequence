@@ -2,11 +2,11 @@ from typing import Any
 
 from sequence.core.mixin import MonotonicIncreasingMixin
 from sequence.core.infinite_type import Explicit
+from sequence.core.utils.functions import digit_sum
 from sequence.sequences.integer.explicit_generalised import (
     PolygonalNumbers,
     GeneralisedNexusNumbers,
 )
-from sequence.core.utils.functions import digit_sum
 
 
 class A000027(Explicit):
