@@ -9,7 +9,7 @@ import pytest
         (0, 10, 0),
         (123, 2, 6),
         (123, 4, 9),
-    ]
+    ],
 )
 def test_digit_sum(number, base, expected_output):
     if digit_sum(number=number, base=base) != expected_output:
