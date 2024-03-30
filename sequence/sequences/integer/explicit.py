@@ -2,7 +2,11 @@ from typing import Any
 
 from sequence.core.mixin import MonotonicIncreasingMixin
 from sequence.core.infinite_type import Explicit
-from sequence.sequences.integer.explicit_generalised import PolygonalNumbers, GeneralisedNexusNumbers
+from sequence.sequences.integer.explicit_generalised import (
+    PolygonalNumbers,
+    GeneralisedNexusNumbers,
+)
+from sequence.core.utils.functions import digit_sum
 
 
 class A000027(Explicit):
@@ -165,6 +169,21 @@ class A005408(Explicit):
 
 
 OddNumbers = A005408
+
+
+class A010060(Explicit):
+    """Thue-Morse sequence (https://oeis.org/A010060)."""
+
+    sequence_name = "Thue-Morse sequence"
+
+    def __contains__(self, item: Any) -> bool:
+        return item in [0, 1]
+
+    def formula(self, index: int) -> int:
+        return digit_sum(number=index, base=2) % 2
+
+
+ThueMorseSequence = A010060
 
 
 class A014551(MonotonicIncreasingMixin, Explicit):
