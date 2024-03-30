@@ -39,6 +39,7 @@ List of implemented integer sequences.
 | A003173 | The Heegner numbers              | `A003173`, `HeegnerNumbers`                               | https://oeis.org/A003173                         |
 | A003215 | The hex numbers                  | `A003215`, `HexNumbers`, `CenteredHexagonalNumbers`       | https://oeis.org/A003215                         |
 | A005408 | The odd numbers                  | `A005408`, `OddNumbers`                                   | https://oeis.org/A005408                         |
+| A010060 | The Thue-Morse sequence          | `A010060`, `ThueMorseSequence`                            | https://oeis.org/A010060                         |
 | A014551 | Jacobsthal-Lucas numbers         | `A014551`, `JachobsthalLucasNumbers`                      | https://oeis.org/A014551                         |
 | A033999 | Sequence of powers of -1         | `A033999`                                                 | https://oeis.org/A033999                         |
 | A051624 | The dodecagonal numbers          | `A051624`, `DodecagonalNumbers`                           | https://oeis.org/A051624                         | 
