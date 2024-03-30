@@ -1,5 +1,6 @@
-from sequence.core.utils.functions import digit_sum
 import pytest
+
+from sequence.core.utils.functions import digit_sum
 
 
 @pytest.mark.parametrize(
@@ -11,6 +12,6 @@ import pytest
         (123, 4, 9),
     ],
 )
-def test_digit_sum(number, base, expected_output):
+def test_digit_sum(number, base, expected_output) -> None:
     if digit_sum(number=number, base=base) != expected_output:
         raise ValueError(f"Expected: {expected_output}, got: {digit_sum(number=number, base=base)}")
