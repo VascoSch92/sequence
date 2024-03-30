@@ -23,6 +23,9 @@ The version is represented by three digits: a.b.c.
 ---
 ## Unreleased
 
+ENHANCEMENT:
+- sequentium.sequence.sequences.explicit.py: add sequence A010060 (Thue-Morse Sequence)
+
 ---
 
 ## [0.0.4] - 2024-03-25
