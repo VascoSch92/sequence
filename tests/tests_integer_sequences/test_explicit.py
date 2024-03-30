@@ -107,6 +107,15 @@ class TestA005408(SequenceTestSuite):
     ground_truth = [2 * index + 1 for index in range(50)]
 
 
+class TestA010060(SequenceTestSuite):
+    sequence = A010060()
+    sequence_name = "Thue-Morse sequence"
+    ground_truth = [
+        0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1,
+        0, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0,
+        0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0
+    ]
+
 class TestA014551(SequenceTestSuite):
     sequence = A014551()
     sequence_name = "Jacobsthal-Lucas numbers"
