@@ -14,7 +14,7 @@ class DigitSumSequence(Explicit):
         - base (int): The base of the number to sum the digits
     """
 
-    sequence_name = "digit sum sequence"
+    SEQUENCE_NAME = "digit sum sequence"
 
     def __init__(self, base: int) -> None:
         super().__init__()
@@ -35,7 +35,7 @@ class GeneralisedNexusNumbers(MonotonicIncreasingMixin, Explicit):
         dimension (int): The dimension parameter for the Generalised Nexus Numbers.
     """
 
-    sequence_name = "generalised Nexus numbers"
+    SEQUENCE_NAME = "generalised Nexus numbers"
 
     def __init__(self, dimension: int) -> None:
         super().__init__()
@@ -53,7 +53,7 @@ class PolygonalNumbers(Explicit):
     - number_of_sides (int): The number of sides for the polygonal numbers.
     """
 
-    sequence_name = "polygonal numbers"
+    SEQUENCE_NAME = "polygonal numbers"
 
     def __init__(self, number_of_sides: int) -> None:
         super().__init__()

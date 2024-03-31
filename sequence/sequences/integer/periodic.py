@@ -4,7 +4,7 @@ from sequence.core.finite_type import Periodic
 class A087204(Periodic):
     """Sequence A087204 (https://oeis.org/A087204)."""
 
-    sequence_name = "sequence A087204"
+    SEQUENCE_NAME = "sequence A087204"
 
     def __init__(self) -> None:
         super().__init__(_period=6)
@@ -14,7 +14,7 @@ class A087204(Periodic):
 class A128834(Periodic):
     """Sequence A128834 (https://oeis.org/A128834)."""
 
-    sequence_name = "sequence A128834"
+    SEQUENCE_NAME = "sequence A128834"
 
     def __init__(self) -> None:
         super().__init__(_period=6)

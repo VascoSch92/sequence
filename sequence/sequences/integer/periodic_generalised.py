@@ -10,7 +10,7 @@ class ConstantSequence(Periodic):
         value (int): the values that the constant sequence is taking
     """
 
-    sequence_name = "value sequence"
+    SEQUENCE_NAME = "value sequence"
 
     def __init__(self, value: int) -> None:
         super().__init__(_period=1)
