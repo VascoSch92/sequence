@@ -53,18 +53,15 @@ def test_markdown() -> None:
 
     sequences_in_markdown_but_not_in_scripts = sequence_markdown.difference(sequence_scripts)
     error_msg = ""
-    if sequences_in_markdown_but_not_in_scripts != set():
-        error_msg += (
-            f"The following sequences are in the SEQUENCE_LIST.md, "
-            f"but are not implemented: {', '.join(list(sequences_in_markdown_but_not_in_scripts))}\n"
-        )
+    sequences_in_markdown_but_not_in_scripts = {entry for entry in sequences_in_markdown_but_not_in_scripts if entry}
+    if len(sequences_in_markdown_but_not_in_scripts) > 0:
+        error_msg += f"The following sequences are in the SEQUENCE_LIST.md, " \
+                     f"but are not implemented: {', '.join(list(sequences_in_markdown_but_not_in_scripts))}\n"
 
     sequences_in_scripts_but_not_in_markdown = sequence_scripts.difference(sequence_markdown)
-    if sequences_in_scripts_but_not_in_markdown != set():
-        error_msg += (
-            f"The following sequences are implemented, "
-            f"but are not in SEQUENCE_LIST.md: {', '.join(list(sequences_in_scripts_but_not_in_markdown))}"
-        )
+    if len(sequences_in_scripts_but_not_in_markdown) > 0:
+        error_msg += f"The following sequences are implemented, " \
+                     f"but are not in SEQUENCE_LIST.md: {', '.join(list(sequences_in_scripts_but_not_in_markdown))}"
 
     if error_msg:
         raise Exception(error_msg)
