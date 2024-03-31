@@ -13,7 +13,7 @@ class HighOrderFibonacciNumbers(MonotonicIncreasingMixin, Recursive):
         order (int): The order of the Fibonacci sequence.
     """
 
-    sequence_name = "High order Fibonacci numbers"
+    SEQUENCE_NAME = "High order Fibonacci numbers"
 
     def __init__(self, order: int) -> None:
         self.order = validate_positive_integer(integer=order)
@@ -44,7 +44,7 @@ class LucasSequenceU(MonotonicIncreasingMixin, Recursive):
         q (int): Coefficient for the U_n term.
     """
 
-    sequence_name = "Lucas sequence U_n"
+    SEQUENCE_NAME = "Lucas sequence U_n"
 
     def __init__(self, p: int, q: int) -> None:
         super().__init__(start_terms=(0, 1))
@@ -67,7 +67,7 @@ class LucasSequenceV(LucasSequenceU):
         q (int): Coefficient for the V_n term.
     """
 
-    sequence_name = "Lucas sequence V_n"
+    SEQUENCE_NAME = "Lucas sequence V_n"
 
     def __init__(self, p: int, q: int) -> None:
         super().__init__(p=p, q=q)

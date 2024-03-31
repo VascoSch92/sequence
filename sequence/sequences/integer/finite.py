@@ -7,7 +7,7 @@ from sequence.core.utils.validation import validate_positive_integer
 class A001228(Finite):
     """Orders of sporadic simple groups (https://oeis.org/A001228)."""
 
-    sequence_name = "orders of sporadic simple groups sequence"
+    SEQUENCE_NAME = "orders of sporadic simple groups sequence"
 
     def __init__(self) -> None:
         super().__init__()
@@ -44,7 +44,7 @@ class A001228(Finite):
 class A003173(Finite):
     """Heegner numbers: imaginary quadratic fields with unique factorization (https://oeis.org/A003173)."""
 
-    sequence_name = "Heegner numbers"
+    SEQUENCE_NAME = "Heegner numbers"
 
     def __init__(self) -> None:
         super().__init__()
@@ -60,7 +60,7 @@ class CollatzSequence(Finite):
     (https://en.wikipedia.org/wiki/Collatz_conjecture)
     """
 
-    sequence_name = "Collatz sequence"
+    SEQUENCE_NAME = "Collatz sequence"
 
     def __init__(self, start_value: int) -> None:
         super().__init__()

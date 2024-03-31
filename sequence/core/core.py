@@ -9,7 +9,7 @@ from sequence.core.utils.validation import validate_as_list_input
 class Sequence(ABC):
     """Abstract base class for representing mathematical sequences."""
 
-    sequence_name: str
+    SEQUENCE_NAME: str
 
     @abstractmethod
     def __contains__(self, item: Any) -> bool:
@@ -23,7 +23,7 @@ class Sequence(ABC):
         return other.__str__() == self.__str__() and other.__dict__ == self.__dict__
 
     def __str__(self) -> str:
-        return self.sequence_name
+        return self.SEQUENCE_NAME
 
     def __iter__(self) -> Generator:
         return self._as_generator()
@@ -48,7 +48,7 @@ class Sequence(ABC):
     @property
     def period(self) -> int:
         """Get the period of the sequence. Raises NotPeriodicSequenceError if the sequence is not periodic."""
-        raise NotPeriodicSequenceError
+        raise NotPeriodicSequenceError(sequence_name=self.SEQUENCE_NAME)
 
     @abstractmethod
     def _as_generator(self) -> Generator:
@@ -85,7 +85,7 @@ class InfiniteType(Sequence, ABC):
         return False
 
     def __len__(self) -> int:
-        raise InfiniteSequenceError
+        raise InfiniteSequenceError(sequence_name=self.SEQUENCE_NAME)
 
     def _as_list(self, stop: int, start: Optional[int] = None, step: Optional[int] = None) -> List[int]:
         stop, start, step = validate_as_list_input(start=start, stop=stop, step=step)
