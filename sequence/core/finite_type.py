@@ -39,7 +39,7 @@ class Periodic(FiniteType, ABC):
         self._period = _period
 
     def __len__(self) -> int:
-        raise InfiniteSequenceError
+        raise InfiniteSequenceError(sequence_name=self.SEQUENCE_NAME)
 
     @property
     def is_finite(self) -> bool:

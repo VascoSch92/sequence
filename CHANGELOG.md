@@ -25,6 +25,24 @@ The version is represented by three digits: a.b.c.
 
 ---
 
+## [0.0.5] - 2024-03-31
+
+ENHANCEMENT:
+- sequentium.sequence.sequences.explicit: add sequence A010060 (Thue-Morse Sequence)
+- sequentium.sequence.sequences.explicit_generalised: add class DigitSumSequence (https://mathworld.wolfram.com/DigitSum.html)
+- sequentium.sequence.sequences.explicit: add sequence A000120 (Number of 1's in binary expansion of n)
+- sequentium.sequence.sequences.explicit: add sequence A053735 (Sum of digits of n written in base 3)
+- sequentium.sequence.sequences.explicit: add sequence A053737 (Sum of digits of n written in base 4)
+- sequentium.sequence.sequences.explicit: add sequence A053824 (Sum of digits of n written in base 5)
+- sequentium.sequence.sequences.explicit: add sequence A053827 (Sum of digits of n written in base 6)
+- sequentium.sequence.sequences.explicit: add sequence A053828 (Sum of digits of n written in base 7)
+- sequentium.sequence.sequences.explicit: add sequence A053829 (Sum of digits of n written in base 8)
+- sequentium.sequence.sequences.explicit: add sequence A053830 (Sum of digits of n written in base 9)
+- sequentium.sequence.sequences.explicit: add sequence A007953 (digit sum)
+- sequentium.tests.tests_core.test_validation: added tests for validation methods
+- sequentium.sequence.core.utils.exceptions: better exceptions
+
+
 ## [0.0.4] - 2024-03-25
 
 ENHANCEMENT:

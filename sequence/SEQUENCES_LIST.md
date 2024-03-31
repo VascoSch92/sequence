@@ -19,6 +19,7 @@ List of implemented integer sequences.
 | A000045 | The Fibonacci numbers            | `A000045`, `FibonacciNumbers`, `FibonacciSequence`        | https://oeis.org/A000045                         |
 | A000073 | The Tribonacci numbers           | `A000073`, `TribonacciNumbers`                            | https://oeis.org/A000073                         |
 | A000078 | The Tetranacci numbers           | `A000078`, `TetranacciNumbers`                            | https://oeis.org/A000078                         |
+| A000120 | Sequence A000120                 | `A000120`,                                                | https://oeis.org/A000120                         |
 | A000129 | The Pell numbers                 | `A000129`, `PellNumbers`, `LambdaNumbers`                 | https://oeis.org/A000129                         |
 | A000217 | The triangular numbers           | `A000217`, `TriangularNumbers`                            | https://oeis.org/A000217                         |
 | A000290 | The square numbers               | `A000290`, `SquareNumbers`                                | https://oeis.org/A000290                         |
@@ -39,6 +40,8 @@ List of implemented integer sequences.
 | A003173 | The Heegner numbers              | `A003173`, `HeegnerNumbers`                               | https://oeis.org/A003173                         |
 | A003215 | The hex numbers                  | `A003215`, `HexNumbers`, `CenteredHexagonalNumbers`       | https://oeis.org/A003215                         |
 | A005408 | The odd numbers                  | `A005408`, `OddNumbers`                                   | https://oeis.org/A005408                         |
+| A007953 | The digit sum                    | `A007953`, `Digsum`                                       | https://oeis.org/A007953                         |
+| A010060 | The Thue-Morse sequence          | `A010060`, `ThueMorseSequence`                            | https://oeis.org/A010060                         |
 | A014551 | Jacobsthal-Lucas numbers         | `A014551`, `JachobsthalLucasNumbers`                      | https://oeis.org/A014551                         |
 | A033999 | Sequence of powers of -1         | `A033999`                                                 | https://oeis.org/A033999                         |
 | A051624 | The dodecagonal numbers          | `A051624`, `DodecagonalNumbers`                           | https://oeis.org/A051624                         | 
@@ -55,6 +58,13 @@ List of implemented integer sequences.
 | A051874 | The icosidigonal numbers         | `A051874`, `IcosidigonalNumbers`                          | https://oeis.org/A051874                         |
 | A051875 | The icositrigonal numbers        | `A051875`, `IcositrigonalNumbers`                         | https://oeis.org/A051875                         |
 | A051876 | The icositetragonal numbers      | `A051876`, `IcositetragonalNumbers`                       | https://oeis.org/A051876                         |
+| A053735 | Sequence A053735                 | `A053735`                                                 | https://oeis.org/A053735                         |
+| A053737 | Sequence A053737                 | `A053737`                                                 | https://oeis.org/A053737                         |
+| A053824 | Sequence A053824                 | `A053824`                                                 | https://oeis.org/A053824                         |
+| A053827 | Sequence A053827                 | `A053827`                                                 | https://oeis.org/A053827                         |
+| A053828 | Sequence A053828                 | `A053828`                                                 | https://oeis.org/A053828                         |
+| A053829 | Sequence A053829                 | `A053829`                                                 | https://oeis.org/A053829                         |
+| A053830 | Sequence A053830                 | `A053830`                                                 | https://oeis.org/A053830                         |
 | A079262 | The Octanacci numbers            | `A079262`, `OctanacciNumbers`                             | https://oeis.org/A079262                         |
 | A087204 | Sequence A087204                 | `A087204`                                                 | https://oeis.org/A087204                         |
 | A104144 | The Enneanacci numbers           | `A104144`, `EnneanacciNumebrs`                            | https://oeis.org/A104144                         |
@@ -74,11 +84,10 @@ List of implemented generalised integer sequences.
 | Sequence Name                  | Sequence class name(s)      | Reference                                                          |     
 |--------------------------------|-----------------------------|--------------------------------------------------------------------|
 | The constant sequence          | `ConstantSequence`          | -                                                                  |
+| The digit sum sequence         | `DigitSumSequence`          | https://mathworld.wolfram.com/DigitSum.html                        |
 | The generalised Nexus numbers  | `GeneralisedNexusNumbers`   | https://mathworld.wolfram.com/NexusNumber.html                     |
 | High order Fibonacci numbers   | `HighOrderFibonacciNumbers` | https://en.wikipedia.org/wiki/Generalizations_of_Fibonacci_numbers |
 | The Lucas sequence U_n         | `LucasSequenceU`            | https://en.wikipedia.org/wiki/Lucas_sequence                       |
 | The Lucas sequence V_n         | `LucasSequenceV`            | https://en.wikipedia.org/wiki/Lucas_sequence                       |
 | The primes of a given sequence | `PrimesOfSequence`          | -                                                                  |
 | The polygonal numbers          | `PolygonalNumbers`          | https://en.m.wikipedia.org/wiki/Polygonal_number                   |
-
-

@@ -31,3 +31,14 @@ def is_prime(number: int) -> bool:
         return False
 
     return all(not (number % d == 0 or number % (d + 2) == 0) for d in range(5, isqrt(number) + 1, 6))
+
+
+def digit_sum(number: int, base: int = 10) -> int:
+    """Compute the sum of the digit of `number` in base `base`."""
+    sum_of_digits = 0
+
+    while number != 0:
+        sum_of_digits += number % base
+        number //= base
+
+    return sum_of_digits

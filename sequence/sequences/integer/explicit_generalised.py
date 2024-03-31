@@ -2,7 +2,29 @@ from typing import Any
 
 from sequence.core.mixin import MonotonicIncreasingMixin
 from sequence.core.infinite_type import Explicit
+from sequence.core.utils.functions import digit_sum
 from sequence.core.utils.validation import validate_positive_integer
+
+
+class DigitSumSequence(Explicit):
+    """
+    Class representing digit sum sequences
+
+    Attributes:
+        - base (int): The base of the number to sum the digits
+    """
+
+    SEQUENCE_NAME = "digit sum sequence"
+
+    def __init__(self, base: int) -> None:
+        super().__init__()
+        self.base = validate_positive_integer(integer=base)
+
+    def __contains__(self, item: Any) -> bool:
+        return True
+
+    def formula(self, index: int) -> int:
+        return digit_sum(number=index, base=self.base)
 
 
 class GeneralisedNexusNumbers(MonotonicIncreasingMixin, Explicit):
@@ -13,7 +35,7 @@ class GeneralisedNexusNumbers(MonotonicIncreasingMixin, Explicit):
         dimension (int): The dimension parameter for the Generalised Nexus Numbers.
     """
 
-    sequence_name = "generalised Nexus numbers"
+    SEQUENCE_NAME = "generalised Nexus numbers"
 
     def __init__(self, dimension: int) -> None:
         super().__init__()
@@ -31,7 +53,7 @@ class PolygonalNumbers(Explicit):
     - number_of_sides (int): The number of sides for the polygonal numbers.
     """
 
-    sequence_name = "polygonal numbers"
+    SEQUENCE_NAME = "polygonal numbers"
 
     def __init__(self, number_of_sides: int) -> None:
         super().__init__()

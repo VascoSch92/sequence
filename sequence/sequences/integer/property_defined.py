@@ -7,7 +7,7 @@ from sequence.sequences.integer.property_defined_generalised import PrimesOfSequ
 class A000040(PrimesOfSequence):
     """The prime numbers (https://oeis.org/A000040)."""
 
-    sequence_name = "prime numbers"
+    SEQUENCE_NAME = "prime numbers"
 
     def __init__(self) -> None:
         super().__init__(base_sequence=A000027)
@@ -20,7 +20,7 @@ PositivePrimeNumbers = A000040
 class A002808(PropertyDefined):
     """The composite numbers (https://oeis.org/A002808)."""
 
-    sequence_name = "composite numbers"
+    SEQUENCE_NAME = "composite numbers"
 
     def __init__(self) -> None:
         super().__init__()
