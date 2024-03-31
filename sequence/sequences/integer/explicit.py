@@ -5,6 +5,7 @@ from sequence.core.infinite_type import Explicit
 from sequence.core.utils.functions import digit_sum
 from sequence.sequences.integer.explicit_generalised import (
     PolygonalNumbers,
+    DigitSumSequence,
     GeneralisedNexusNumbers,
 )
 
@@ -23,6 +24,15 @@ class A000027(Explicit):
 
 PositiveIntegers = A000027
 NaturalNumbers = A000027
+
+
+class A000120(DigitSumSequence):
+    """Number of 1's in binary expansion of n (https://oeis.org/A000120)."""
+
+    sequence_name = "sequence A000120"
+
+    def __init__(self) -> None:
+        super().__init__(base=2)
 
 
 class A000217(PolygonalNumbers):
@@ -169,6 +179,18 @@ class A005408(Explicit):
 
 
 OddNumbers = A005408
+
+
+class A007953(DigitSumSequence):
+    """Digital sum (i.e., sum of digits) of n (https://oeis.org/A007953)."""
+
+    sequence_name = "digsum"
+
+    def __init__(self)-> None:
+        super().__init__(base=10)
+
+
+Digsum = A007953
 
 
 class A010060(Explicit):
@@ -381,6 +403,67 @@ class A051876(PolygonalNumbers):
 
 
 IcositetragonalNumbers = A051876
+
+
+class A053735(DigitSumSequence):
+    """Sum of digits of n written in base 3 (https://oeis.org/A053735)."""
+
+    sequence_name = "sequence A053735"
+
+    def __init__(self) -> None:
+        super().__init__(base=3)
+
+
+class A053737(DigitSumSequence):
+    """Sum of digits of n written in base 4 (https://oeis.org/A053737)."""
+    sequence_name = "sequence A053737"
+
+    def __init__(self) -> None:
+        super().__init__(base=4)
+
+
+class A053824(DigitSumSequence):
+    """Sum of digits of n written in base 5 (https://oeis.org/A053824)."""
+    sequence_name = "sequence A053824"
+
+    def __init__(self)-> None:
+        super().__init__(base=5)
+
+
+class A053827(DigitSumSequence):
+    """Sum of digits of n written in base 6 (https://oeis.org/A053827)."""
+
+    sequence_name = "sequence A053827"
+
+    def __init__(self) -> None:
+        super().__init__(base=6)
+
+
+class A053828(DigitSumSequence):
+    """Sum of digits of n written in base 7 (https://oeis.org/A053828)."""
+
+    sequence_name = "sequence A053828"
+
+    def __init__(self) -> None:
+        super().__init__(base=7)
+
+
+class A053829(DigitSumSequence):
+    """Sum of digits of n written in base 8 (https://oeis.org/A053829)."""
+
+    sequence_name = "sequence A053829"
+
+    def __init__(self) -> None:
+        super().__init__(base=8)
+
+
+class A053830(DigitSumSequence):
+    """Sum of digits of n written in base 9 (htpps://oeis.org/A053830)."""
+
+    sequence_name = "sequence A053830"
+
+    def __init__(self) -> None:
+        super().__init__(base=9)
 
 
 class A167149(PolygonalNumbers):
