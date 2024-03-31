@@ -23,6 +23,10 @@ The version is represented by three digits: a.b.c.
 ---
 ## Unreleased
 
+---
+
+## [0.0.5] - 2024-03-31
+
 ENHANCEMENT:
 - sequentium.sequence.sequences.explicit: add sequence A010060 (Thue-Morse Sequence)
 - sequentium.sequence.sequences.explicit_generalised: add class DigitSumSequence (https://mathworld.wolfram.com/DigitSum.html)
@@ -38,7 +42,6 @@ ENHANCEMENT:
 - sequentium.tests.tests_core.test_validation: added tests for validation methods
 - sequentium.sequence.core.utils.exceptions: better exceptions
 
----
 
 ## [0.0.4] - 2024-03-25
 
