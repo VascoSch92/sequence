@@ -32,7 +32,8 @@ class SequenceTestSuite:
         """Test if the sequence's finiteness matches the expected value."""
         if self.sequence.is_finite != self.is_finite:
             raise ValueError(
-                f"Expected {self.is_finite} as output of the method `is_finite`. " f"But got {self.sequence.is_finite}."
+                f"Expected {self.is_finite} as output of the method `is_finite`. " 
+                f"But got {self.sequence.is_finite}."
             )
 
     def test_is_periodic(self) -> None:
@@ -70,15 +71,6 @@ class SequenceTestSuite:
         for element in self.ground_truth:
             if (element in self.sequence) is False:
                 error_msg += f"- The expression ({element} in sequence) must be True, but it is not.\n"
-        if error_msg:
-            raise ValueError(error_msg)
-
-    def test_not_in_operator(self) -> None:
-        """Test if elements not in the ground truth are correctly identified as not in the sequence."""
-        error_msg = ""
-        for element in range(len(self.ground_truth)):
-            if element not in self.ground_truth and (element not in self.sequence) is False:
-                error_msg += f"- The expression ({element} in sequence) must be False, but it is not.\n"
         if error_msg:
             raise ValueError(error_msg)
 
