@@ -1,12 +1,12 @@
 # Sequentium
 
+---
 ![GitHub Release](https://img.shields.io/github/v/release/vascoSch92/sequentium)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/sequentium)
 [![Downloads](https://static.pepy.tech/badge/sequentium)](https://pepy.tech/project/sequentium)
-![PyPI - License](https://img.shields.io/pypi/l/sequentium)
+![PyPI - License](https://img.shields.io/pypi/l/sequentium) 
 [![first-timers-only](https://img.shields.io/badge/first--timers--only-friendly-blue.svg?style=flat)](https://www.firsttimersonly.com/)
 ![Static Badge](https://img.shields.io/badge/Linting%20-%20passing%20-%20green?style=flat&logo=ruff&label=Linted%20with%20Ruff&color=blue)
-[![tests-suite](https://github.com/VascoSch92/sequentium/actions/workflows/tests-suite.yml/badge.svg?branch=main)](https://github.com/VascoSch92/sequentium/actions/workflows/tests-suite.yml)
 ---
 
 Sequentium is a user-friendly package that implements various well-known sequences, 
