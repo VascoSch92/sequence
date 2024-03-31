@@ -4,8 +4,8 @@ from sequence.core.mixin import MonotonicIncreasingMixin
 from sequence.core.infinite_type import Explicit
 from sequence.core.utils.functions import digit_sum
 from sequence.sequences.integer.explicit_generalised import (
-    PolygonalNumbers,
     DigitSumSequence,
+    PolygonalNumbers,
     GeneralisedNexusNumbers,
 )
 
@@ -186,7 +186,7 @@ class A007953(DigitSumSequence):
 
     sequence_name = "digsum"
 
-    def __init__(self)-> None:
+    def __init__(self) -> None:
         super().__init__(base=10)
 
 
@@ -416,6 +416,7 @@ class A053735(DigitSumSequence):
 
 class A053737(DigitSumSequence):
     """Sum of digits of n written in base 4 (https://oeis.org/A053737)."""
+
     sequence_name = "sequence A053737"
 
     def __init__(self) -> None:
@@ -424,9 +425,10 @@ class A053737(DigitSumSequence):
 
 class A053824(DigitSumSequence):
     """Sum of digits of n written in base 5 (https://oeis.org/A053824)."""
+
     sequence_name = "sequence A053824"
 
-    def __init__(self)-> None:
+    def __init__(self) -> None:
         super().__init__(base=5)
 
 

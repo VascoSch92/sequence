@@ -2,8 +2,8 @@ from typing import Any
 
 from sequence.core.mixin import MonotonicIncreasingMixin
 from sequence.core.infinite_type import Explicit
-from sequence.core.utils.validation import validate_positive_integer
 from sequence.core.utils.functions import digit_sum
+from sequence.core.utils.validation import validate_positive_integer
 
 
 class DigitSumSequence(Explicit):

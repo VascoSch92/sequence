@@ -32,8 +32,7 @@ class SequenceTestSuite:
         """Test if the sequence's finiteness matches the expected value."""
         if self.sequence.is_finite != self.is_finite:
             raise ValueError(
-                f"Expected {self.is_finite} as output of the method `is_finite`. " 
-                f"But got {self.sequence.is_finite}."
+                f"Expected {self.is_finite} as output of the method `is_finite`. But got {self.sequence.is_finite}."
             )
 
     def test_is_periodic(self) -> None:
