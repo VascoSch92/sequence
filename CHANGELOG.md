@@ -35,6 +35,8 @@ ENHANCEMENT:
 - sequentium.sequence.sequences.explicit: add sequence A053829 (Sum of digits of n written in base 8)
 - sequentium.sequence.sequences.explicit: add sequence A053830 (Sum of digits of n written in base 9)
 - sequentium.sequence.sequences.explicit: add sequence A007953 (digit sum)
+- sequentium.tests.tests_core.test_validation: added tests for validation methods
+- sequentium.sequence.core.utils.exceptions: better exceptions
 
 ---
 
