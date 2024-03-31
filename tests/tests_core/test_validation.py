@@ -1,14 +1,15 @@
 import pytest
-from sequence.core.utils.validation import (
-    validate_integer,
-    validate_positive_integer,
-    validate_strictly_positive_integer,
-    validate_given_length_integer_tuple,
-    validate_as_list_input,
-)
+
 from sequence.core.utils.exceptions import (
     PositiveIntegerError,
     StrictlyPositiveIntegerError,
+)
+from sequence.core.utils.validation import (
+    validate_integer,
+    validate_as_list_input,
+    validate_positive_integer,
+    validate_strictly_positive_integer,
+    validate_given_length_integer_tuple,
 )
 
 
@@ -18,7 +19,7 @@ def test_validate_integer(integer) -> None:
         raise ValueError(f"Expected: {integer}. Got {validate_integer(integer=integer)}")
 
 
-@pytest.mark.parametrize("integer", [ 23.23, "asd", [], {'asd': 23.23}, {123}])
+@pytest.mark.parametrize("integer", [23.23, "asd", [], {"asd": 23.23}, {123}])
 def test_error_validate_integer(integer) -> None:
     with pytest.raises(ValueError):
         _ = validate_integer(integer=integer)
@@ -36,7 +37,7 @@ def test_validate_positive_integer(integer) -> None:
         (23.23, ValueError),
         ("asd", ValueError),
         (-12, PositiveIntegerError),
-    ]
+    ],
 )
 def test_error_validate_positive_integer(integer, error) -> None:
     with pytest.raises(error):
@@ -56,9 +57,9 @@ def test_validate_strictly_positive_integer(integer) -> None:
         ("asd", ValueError),
         (-12, StrictlyPositiveIntegerError),
         (0, StrictlyPositiveIntegerError),
-    ]
+    ],
 )
-def test_error_validate_positive_integer(integer, error) -> None:
+def test_error_validate_strictly_positive_integer(integer, error) -> None:
     with pytest.raises(error):
         _ = validate_strictly_positive_integer(integer=integer)
 
@@ -75,8 +76,7 @@ def test_error_validate_given_length_integer_tuple(tuple, length) -> None:
 
 
 @pytest.mark.parametrize(
-    "input_values, expected_values",
-    [((2, 1, 3), (2, 1, 3)), ((2, None, 3), (2, 0, 3)), ((2, 1, None), (2, 1, 1))]
+    "input_values, expected_values", [((2, 1, 3), (2, 1, 3)), ((2, None, 3), (2, 0, 3)), ((2, 1, None), (2, 1, 1))]
 )
 def test_validate_as_list_input(input_values, expected_values) -> None:
     output = validate_as_list_input(
