@@ -23,7 +23,7 @@ class Arith(Sequence):
         self._op = self._resolve_operation(operation)
 
     def __add__(self, other):
-        if not isinstance(other, Arith):
+        if not isinstance(other, Arith) or self._op != other._op:
             return Arith(sequences=[*self.sequences, other], operation="+")
         else:
             return Arith(sequences=[*self.sequences, *other.sequences], operation="+")
@@ -31,7 +31,7 @@ class Arith(Sequence):
     def __mul__(self, other):
         from sequence.sequences.compose.arith import Arith
 
-        if not isinstance(other, Arith):
+        if not isinstance(other, Arith) or self._op != other._op:
             return Arith(sequences=[*self.sequences, other], operation="*")
         else:
             return Arith(sequences=[*self.sequences, *other.sequences], operation="*")
