@@ -22,6 +22,20 @@ class Arith(Sequence):
         self.operation = operation
         self._op = self._resolve_operation(operation)
 
+    def __add__(self, other):
+        if not isinstance(other, Arith):
+            return Arith(sequences=[*self.sequences, other], operation="+")
+        else:
+            return Arith(sequences=[*self.sequences, *other.sequences], operation="+")
+
+    def __mul__(self, other):
+        from sequence.sequences.compose.arith import Arith
+
+        if not isinstance(other, Arith):
+            return Arith(sequences=[*self.sequences, other], operation="*")
+        else:
+            return Arith(sequences=[*self.sequences, *other.sequences], operation="*")
+
     def _resolve_operation(self, operation):
         """Coerce operation to a numpy.ufunc."""
         alias_dict = {
