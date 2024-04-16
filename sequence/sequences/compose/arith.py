@@ -1,53 +1,58 @@
+from math import gcd, lcm, prod
+
 from sequence.core.core import Sequence
 
-import numpy as np
 
-
-class Arith(Sequence):
-    """Sequences combined via arithmetic operation, e.g., addition, multiplication.
+class ArithOp(Sequence):
+    """Sequences combined via ArithOpmetic operation, e.g., addition, multiplication.
 
     Parameters
     ----------
     sequences : List[Sequence]
         List of sequences to combine.
-    operation : None, str, function, or numpy ufunc, optional, default = None = mean
-        if str, must be one of "mean", "+" (add), "*" (multiply), "max", "min"
+    operation : None, str, function, or numpy ufunc, optional, default = "+""
+        if str, must be one of "+" (add), "*" (multiply), "max", "min", "gcd", "lcm"
         if func, must be of signature (1D iterable) -> float
         operation carried out on the sequences
     """
 
-    def __init__(self, sequences, operation):
+    def __init__(self, sequences, operation="+"):
         super().__init__()
         self.sequences = sequences
         self.operation = operation
         self._op = self._resolve_operation(operation)
 
     def __add__(self, other):
-        if not isinstance(other, Arith) or self._op != other._op:
-            return Arith(sequences=[*self.sequences, other], operation="+")
+        if not isinstance(other, ArithOp) or self._op != other._op:
+            return ArithOp(sequences=[*self.sequences, other], operation="+")
         else:
-            return Arith(sequences=[*self.sequences, *other.sequences], operation="+")
+            return ArithOp(sequences=[*self.sequences, *other.sequences], operation="+")
 
     def __mul__(self, other):
-        from sequence.sequences.compose.arith import Arith
+        from sequence.sequences.compose.ArithOp import ArithOp
 
-        if not isinstance(other, Arith) or self._op != other._op:
-            return Arith(sequences=[*self.sequences, other], operation="*")
+        if not isinstance(other, ArithOp) or self._op != other._op:
+            return ArithOp(sequences=[*self.sequences, other], operation="*")
         else:
-            return Arith(sequences=[*self.sequences, *other.sequences], operation="*")
+            return ArithOp(sequences=[*self.sequences, *other.sequences], operation="*")
+
+    def __len__(self):
+        lens = [len(sequence) for sequence in self.sequences]
+        return min(lens)
 
     def _resolve_operation(self, operation):
         """Coerce operation to a numpy.ufunc."""
         alias_dict = {
-            None: np.mean,
-            "mean": np.mean,
-            "+": np.add,
-            "add": np.add,
-            "*": np.multiply,
-            "mult": np.multiply,
-            "multiply": np.multiply,
-            "min": np.min,
-            "max": np.max,
+            None: sum,
+            "+": sum,
+            "add": sum,
+            "*": prod,
+            "mult": prod,
+            "multiply": prod,
+            "min": min,
+            "max": max,
+            "gcd": gcd,
+            "lcm": lcm,
         }
 
         if operation in alias_dict.keys():

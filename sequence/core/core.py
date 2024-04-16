@@ -36,20 +36,20 @@ class Sequence(ABC):
         return self._at(index=item)
 
     def __add__(self, other):
-        from sequence.sequences.compose.arith import Arith
+        from sequence.sequences.compose.ArithOp import ArithOp
 
-        if not isinstance(other, Arith):
-            return Arith(sequences=[self, other], operation="+")
+        if not isinstance(other, ArithOp):
+            return ArithOp(sequences=[self, other], operation="+")
         else:
-            return Arith(sequences=[self, *other.sequences], operation="+")
+            return ArithOp(sequences=[self, *other.sequences], operation="+")
 
     def __mul__(self, other):
-        from sequence.sequences.compose.arith import Arith
+        from sequence.sequences.compose.ArithOp import ArithOp
 
-        if not isinstance(other, Arith):
-            return Arith(sequences=[self, other], operation="*")
+        if not isinstance(other, ArithOp):
+            return ArithOp(sequences=[self, other], operation="*")
         else:
-            return Arith(sequences=[self, *other.sequences], operation="*")
+            return ArithOp(sequences=[self, *other.sequences], operation="*")
 
     @abstractmethod
     def is_finite(self) -> bool:
