@@ -23,6 +23,8 @@ The version is represented by three digits: a.b.c.
 ---
 ## Unreleased
 
+- sequences.compose: add `ArithOp` for symbolic composition of sequences
+
 ---
 
 ## [0.0.5] - 2024-03-31

@@ -35,6 +35,22 @@ class Sequence(ABC):
             return self._as_list(start=item.start, stop=item.stop, step=item.step)
         return self._at(index=item)
 
+    def __add__(self, other):
+        from sequence.sequences.compose.ArithOp import ArithOp
+
+        if not isinstance(other, ArithOp):
+            return ArithOp(sequences=[self, other], operation="+")
+        else:
+            return ArithOp(sequences=[self, *other.sequences], operation="+")
+
+    def __mul__(self, other):
+        from sequence.sequences.compose.ArithOp import ArithOp
+
+        if not isinstance(other, ArithOp):
+            return ArithOp(sequences=[self, other], operation="*")
+        else:
+            return ArithOp(sequences=[self, *other.sequences], operation="*")
+
     @abstractmethod
     def is_finite(self) -> bool:
         """Check if the sequence is finite."""
